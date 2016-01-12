@@ -3,7 +3,7 @@ import numpy as np
 import time
 import helper 
 import matplotlib.pyplot as plt
-#Code is ugly but functional 
+#Code is ugly but functional, written responses in comments  
 #Comparing run times for n=100
 n = 100
 A = np.random.rand(n)
@@ -45,6 +45,7 @@ T6=t2-t1
 
 plt.plot([100,1000,10000],[T1,T3,T5])
 plt.plot([100,1000,10000],[T2,T4,T6])
+#The data does follow the data expectations, the three trials for N={100,1000,10000} were used as sample points to establish a trend 
 
 # Question 2  - Fibonacci
 print(helper.fibonacci(24))
@@ -142,3 +143,5 @@ helper.plot_c(x,y)
 y = helper.fft_slow(y,1.)
 helper.plot_c(f[:0.5*N],y[:N])
 plt.show()
+
+#In each plot, the distance between the "peaks" of the spectra seem to be increasing. However, the distance decreases once again with the larger b values, seen  when b=50. 
